@@ -1,1 +1,3 @@
 https://docs.gitlab.com/operator/troubleshooting/#nginx-ingress-controller-pods-missing
+
+yq eval '. | select(.metadata.name | test(".*scc.*"))' gitlab-operator-openshift-VERSION.yaml > scc.yaml
